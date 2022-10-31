@@ -18,9 +18,10 @@
     "jsx": "react-jsx",
     "paths": {
       "@components/*": ["src/components/*"],
-      "@pages/*": ["src/pages/*"]
+      "@pages/*": ["src/pages/*"],
+      "@services/*": ["src/services/*"]
     }
   },
-  "include": ["src", "tailwind.config.cjs", "postcss.config.cjs"],
+  "include": ["src", "./*"],
   "references": [{ "path": "./tsconfig.node.json" }],
 }
