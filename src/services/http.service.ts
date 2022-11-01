@@ -9,7 +9,7 @@ const instance = axios.create({
 
 instance.interceptors.response.use((res) => res.data);
 
-export const uploadSourceCode = async (source: FormData) => instance.post(`${API_URL}/Analyzer/cpp`, source, {
+export const uploadSourceCode = async (source: FormData) => instance.post('/Analyzer/cpp', source, {
     headers: {
         accept: '*/*',
         'Content-Type': 'multipart/form-data',
