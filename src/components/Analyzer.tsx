@@ -13,8 +13,6 @@ const Token: FC<{ token: string, meta: string }> = ({ token, meta }) => (
 const Analyzer: FC<{ res: any }> = ({ res }) => {
     if (!res) return null;
 
-    console.log(res);
-
     return (
         <div className="relative w-full mt-12 flex flex-row justify-between">
             <p className="sticky w-1/2 space-x-3 text-xl bg-neutral rounded-xl p-4">
@@ -32,7 +30,7 @@ const Analyzer: FC<{ res: any }> = ({ res }) => {
                 </thead>
                 <tbody>
                     {res && res.tokenized && (Object.entries(res.tokenized) ?? []).map(
-                        ([key, value]) => (
+                        ([key, value]: [string, any]) => (
                             <tr>
                                 <td>{key}</td>
                                 <td>{value.meta}</td>
